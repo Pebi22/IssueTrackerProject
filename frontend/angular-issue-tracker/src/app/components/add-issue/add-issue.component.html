@@ -1,0 +1,29 @@
+<div class="appBody">
+  <h2>Add a new Issue</h2>
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          required
+          [(ngModel)]="issueTitle"
+          name="title"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input
+          class="form-control"
+          id="description"
+          required
+          [(ngModel)]="issueBody"
+          name="description"
+        />
+      </div>
+      <button (click)="addNewIssue()" class="btn btn-success">Submit</button>
+    </div>
+  </div>
+</div>

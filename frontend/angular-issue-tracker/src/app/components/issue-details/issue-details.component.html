@@ -1,0 +1,42 @@
+<div *ngIf="issue" class="appBody">
+  <h2>Issue</h2>
+  <div class="divVoteWrapper">
+    <div class="divVote">
+      votes:
+      <button class="btn btn-success btnVote" (click)="upVote(issue)">↑</button>
+      <p>
+        <b> {{ issue.votes }} </b>
+      </p>
+      <button class="btn btn-danger btnVote" (click)="downVote(issue)">
+        ↓
+      </button>
+    </div>
+  </div>
+  <div class="divIssue">
+    <div>
+      <label><strong>Title:</strong></label> {{ issue.title }}
+    </div>
+    <div>
+      <label><strong>Description:</strong></label> {{ issue.body }}
+    </div>
+    <span
+      ><small
+        ><i>created on {{ issue.created | date }}</i></small
+      ></span
+    >
+  </div>
+</div>
+<div class="divInputComment">
+  <label for="inputCommentBody">Write a new Comment:</label>
+  <textarea
+    class="form-control"
+    type="text"
+    id="inputCommentBody"
+    required
+    [(ngModel)]="commentBody"
+  ></textarea
+  ><br />
+  <button class="btn btn-primary" (click)="addComment()">Add Comment</button>
+</div>
+
+<app-comments [issue]="issue"></app-comments>

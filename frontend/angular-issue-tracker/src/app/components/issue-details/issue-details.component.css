@@ -1,0 +1,25 @@
+.divInputComment {
+  padding: 0% 5% 2% !important;
+}
+.appBody {
+  padding: 5% 5% 2%;
+}
+
+.btnVote {
+  font-size: 10px;
+}
+
+.divVote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
+}
+
+p {
+  margin: auto !important;
+}
+
+.divVoteWrapper {
+  display: grid;
+  float: right;
+}

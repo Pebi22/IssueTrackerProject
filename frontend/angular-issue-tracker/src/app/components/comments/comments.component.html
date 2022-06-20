@@ -1,0 +1,19 @@
+<div *ngIf="issue" class="appBody">
+  <div *ngIf="issue.comments?.length">
+    <h4>Comments:</h4>
+  </div>
+  <div *ngFor="let comment of issue.comments">
+    <hr />
+    <span
+      ><small
+        ><i>posted on {{ comment.created | date }}</i></small
+      ></span
+    ><button class="btn btn-danger" (click)="deleteComment(comment.id!)">
+      X
+    </button>
+    <br />
+    <span>{{ comment.body }}</span>
+  </div>
+  <br />
+  <br />
+</div>
